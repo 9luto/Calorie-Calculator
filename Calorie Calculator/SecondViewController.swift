@@ -8,6 +8,9 @@
 
 import UIKit
 
+var userExerciseTime: Double?
+var userHearRate: Double?
+
 class SecondViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -15,6 +18,12 @@ class SecondViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBOutlet weak var heartRate: UITextField!
+    @IBOutlet weak var exerciseTime: UITextField!
+    @IBAction func saveExerciseInfo(_ sender: Any) {
+    
+        userExerciseTime = Double(exerciseTime.text!)
+        userHearRate = Double(heartRate.text!)
+    }
 }
 
